@@ -1,14 +1,19 @@
 # InceptionU Cohort 9
 ## Sessions
-- Sept 21 - Command Line Basics
+- **Sept 21** - Command Line Basics
     - [Dailies](https://github.com/acidtone/dailies-c9/tree/main/2022-09-21-command-line/follow-the-white-rabbit)
-- Sept 23 - Git and GitHub
+- **Sept 23** - Git and GitHub
     - [Dailies](https://github.com/acidtone/dailies-c9/tree/main/2022-09-23-git-and-github)
-- Oct 7 - Searching and Errors
+- **Oct 7** - Searching and Errors
     - Slides:
         - [Handling Errors](slides/js/js-errors.html)
         - [Better Search Phrases](slides/misc/better-search-phrases.html)
-- Nov 1 - Flexbox
+- **Nov 1** - Flexbox
+    - Resources
+        - [Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+        - Learning Games:
+            - [Flexbox Froggy](https://flexboxfroggy.com/)
+            - [Flexbox Zombies](https://mastery.games/flexboxzombies/)
     - Slides:
         - [Flexbox Basics - Horizontal Navigation](slides/html-css/flexbox-basics.html)
         - [Flexbox Intermediate - Layout Patterns](slides/html-css/flexbox-intermediate.html)
