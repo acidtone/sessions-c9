@@ -21,7 +21,7 @@
         - [Heros and Banners](slides/html-css/heros-banners.html)
     - Sample Code:
         - [Dailies](https://github.com/acidtone/dailies-c9/tree/main/2022-11-01-flexbox)
-        - Codepens
+        - Codepens:
             - [Flexbox Navigation Examples](https://codepen.io/acidtone/pen/bGMaLNo)
             - [Common Flexbox Layout Patterns](https://codepen.io/acidtone/pen/JjvpOKR)
                 - Source: [Flexbox design patterns you can use in your projects](https://www.youtube.com/watch?v=vQAvjof1oe4) by Kevin Powell
