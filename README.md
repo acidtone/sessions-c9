@@ -1,5 +1,4 @@
-# InceptionU Cohort 9
-## Sessions
+## Sessions - InceptionU Cohort 9
 ### Sept 21 - Command Line Basics
 - [Dailies](https://github.com/acidtone/dailies-c9/tree/main/2022-09-21-command-line/follow-the-white-rabbit)
 
