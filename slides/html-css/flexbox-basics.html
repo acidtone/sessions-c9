@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Basics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/theme/sky.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/highlight/monokai.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.js"></script>
+    <style>
+      :root {
+        --r-heading-text-transform: small-caps;
+      }
+      body .reveal .slides {
+        font-size: 36px;
+        text-align: left;
+      }
+
+      body .reveal .slides h1 {
+        font-size: 3em;
+      }
+
+      body .reveal .slides h2 {
+        font-size: 2em;
+      }
+
+      h1, h2 {
+        text-align: center;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-variant: small-caps;
+        text-align: center;
+      }
+      h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+        font-variant: initial;
+      }
+      
+      dd {
+        margin-bottom: 2rem;
+      }
+
+      .reveal p > img {
+        display: block;
+        margin: auto;
+      }
+
+      .reveal pre code {
+        padding: 1rem;
+      }
+      .code {
+        font-family:'Courier New', Courier, monospace;
+        font-size: 2.5rem;
+        white-space: nowrap;
+        color: grey;
+      }
+      .code strong {
+        color: black;
+      }
+
+      .code.no-bullet {
+        list-style: none;
+        padding-left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          <textarea data-template>
+            # Flexbox basics
+            ## Containers, Items & Horiontal Navigation
+
+            ---
+
+            ## Accessible Navigation
+            Screen readers recognize the following semantic HTML elements as special:
+            - `<header>`, 
+            - `<main>`, 
+            - `<nav>`
+            - `<footer>`
+
+            ---
+            ## Navigation best practices
+            ```html
+            <nav>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </nav>
+            ```
+            - Wrap navigation in a `<nav>` element;
+            - Wrap links in an unordered list;
+
+            ---
+
+            ## Typical Vertical nav bar 
+            With some added padding, typography and colour:
+
+            ![Typical vertical nav bar](../../assets/images/html-css/vertical-nav.png)
+
+            See: [Typical vertical navigation menu](https://codepen.io/browsertherapy/pen/XWjwJGL)
+
+            ---
+
+            ## Terminology
+
+            **Flex Container**
+            : An element with `display: flex` which creates a "flex context" for its items. This most often the `<ul>` in nav bars.
+
+            **Flex Item**
+            : All direct children of the Flex container. Often selected with a child selector such as `.container > *`. This is most often the `<li>` in nav bars.
+
+            See: [Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+            ---
+
+            ## `ul` as Flex Container
+            The first step in creating a horizontal nav bar is to create a Flex Container on the `<ul>`:
+
+            ```css
+            nav ul {
+              display: flex;
+            }
+            ```
+
+            Which will create the default layout:
+
+            ![Flex container](../../assets/images/html-css/flex-default.png)
+
+            ---
+
+            ## Place links on the end
+            You can justify the links to the opposite end with `justify-content: flex-end`:
+
+            ```css
+            nav ul {
+              display: flex;
+              justify-content: flex-end;
+            }
+            ```
+
+            Which will create the following layout:
+
+            ![Justify end](../../assets/images/html-css/flex-end.png)
+
+            ---
+
+            ## Place links in the centre
+            You can centre the links in the menu with `justify-content: center`:
+
+            ```css
+            nav ul {
+              display: flex;
+              justify-content: center;
+            }
+            ```
+
+            Which will create the following layout:
+
+            ![Justify centre](../../assets/images/html-css/justify-centre.png)
+
+            ---
+
+            ## All extra space between the links
+            You can put all empty space between the links:
+
+            ```css
+            nav ul {
+              display: flex;
+              justify-content: space-between;
+            }
+            ```
+
+            Which will create the following layout:
+
+            ![Space between](../../assets/images/html-css/space-between.png)
+
+            ---
+
+            ## Equal space around each link
+            You can put an equal amount of space between each link (half-space on ends):
+
+            ```css
+            nav ul {
+              display: flex;
+              justify-content: space-around;
+            }
+            ```
+
+            Which will create the following layout:
+
+            ![Space around](../../assets/images/html-css/space-around.png)
+
+            ---
+
+            ## Equal space, including ends
+            You can space the link equally, including ends, with:
+
+            ```css
+            nav ul {
+              display: flex;
+              justify-content: space-evenly;
+            }
+            ```
+
+            Which will create the following layout:
+
+            ![Space evenly](../../assets/images/html-css/space-evenly.png)
+
+            ---
+
+            ## Links grow to fill extra space
+            You can have the links expand to fill all emtpy space with:
+
+            ```css
+            /* container */
+            nav ul {
+              display: flex;
+            }
+
+            /* items */
+            nav ul > * {
+              flex: auto;
+            }
+            ```
+
+            Which will create the following layout:
+
+            ![Grow to fill space](../../assets/images/html-css/flex-grow.png)
+
+            ---
+
+            ## Key Takeaways
+            - Flexbox doesn't care what elements are Flex items; if it's a direct child of a Flex container, it becomes a Flex item;
+            - The flex items can be of a mix of element types;
+            - The default direction for `display: flex` is left-to-right but you can change this with:
+                ```css
+                nav ul {
+                  flex-direction: column;
+                }
+                ```
+            - Adjust the opposite axis (up-down, by default) with the `align-items` property (which is `stretch` by default);
+
+            ---
+
+            ## Pro-tip: Flexbox Inspector
+            Use the Flexbox Inspector by clicking the `flex` button on the HTML container in the inspector:
+
+            ![Flex Inspector](../../assets/images/html-css/flex-inspector.png)
+
+            ---
+
+            ## Digging Deeper
+            Learning games for Flexbox:
+            - [Flexbox Froggy](https://flexboxfroggy.com/)
+            - [Flexbox Zombies](https://mastery.games/flexboxzombies/)
+
+
+          </textarea>
+        </section>
+      </div>
+    </div>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        plugins: [ RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+  </body>
+</html>

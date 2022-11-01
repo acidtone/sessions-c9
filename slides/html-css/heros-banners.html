@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heros and Banners</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/theme/sky.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/highlight/monokai.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.js"></script>
+    <style>
+      :root {
+        --r-heading-text-transform: small-caps;
+      }
+      body .reveal .slides {
+        font-size: 36px;
+        text-align: left;
+      }
+
+      body .reveal .slides h1 {
+        font-size: 3em;
+      }
+
+      body .reveal .slides h2 {
+        font-size: 2em;
+      }
+
+      h1, h2 {
+        text-align: center;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-variant: small-caps;
+        text-align: center;
+      }
+      h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+        font-variant: initial;
+      }
+      
+      dd {
+        margin-bottom: 2rem;
+      }
+
+      .reveal p > img {
+        display: block;
+        margin: auto;
+      }
+
+      .reveal pre code {
+        padding: 1rem;
+      }
+      .code {
+        font-family:'Courier New', Courier, monospace;
+        font-size: 2.5rem;
+        white-space: nowrap;
+        color: grey;
+      }
+      .code strong {
+        color: black;
+      }
+
+      .code.no-bullet {
+        list-style: none;
+        padding-left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          <textarea data-template>
+            # Heros and Banners
+            ## Flexbox with `<header>`
+
+            ---
+            
+            ## Banners with Nested Flexboxes
+            ### Key Takeaways
+            - Flexbox/Grid Items can also be Flex/Grid Containers;
+            - Nested containers are often used to layout primary navigation with site logos/titles;
+            - Common banner layout pattern for internal pages:
+                ![Example banner for program website](../../assets/images/html/page-banner.png)
+
+            ---
+
+            ## Nested Example
+            The program website uses two nested Flexboxes (actually more) in its banner:
+
+            Outer Flexbox:
+            ![Banner flex inspector](../../assets/images/html-css/outer-flexbox.png)
+
+            Logo/Site title Flexbox:
+            ![Site title flex inspector](../../assets/images/html-css/site-title-flexbox.png)
+
+            Navigation Flexbox:
+            ![Navigation flex inspector](../../assets/images/html-css/nav-flexbox.png)
+
+            ---
+
+            ## Hero sections
+            ### Key Takeaways
+            - Hero sections are usually displayed on the home page and important internal pages;
+            - Smaller page banners are used on all other pages;
+            - CSS images are used to allow overlapping text;
+            - `height` or `min-height` is usually needed to the size of the hero section;
+            - Flex and/or Grid can be used to center content vertically and horizontally;
+
+            ---
+
+            ## Centering Hero Content
+            ![Example of centred content](../../assets/images/html-css/centred-content.png)
+
+            ---
+
+            ### The Code
+            HTML
+            ```html
+            <body>
+              <header>
+                <img src="/path/to/file" alt="hero image" width="350" height="350">
+              </header>
+            </body>
+            ```
+
+            CSS
+            ```css
+            header {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              height: 100vh;
+              background-color: papayawhip;
+            }
+            ```
+
+            ---
+
+            ## CSS Backgrounds
+            ### An easy way to overlap text on images
+            ![Example of centred content](../../assets/images/html-css/hero-image.png)
+
+            ---
+
+            ### The HTML Code
+            ```html
+            <body>
+              <header>
+                <p>Web Fundamentals</p>
+              </header>
+            </body>
+            ```
+            Flexbox can position any content in your Hero sections:
+            - Call-to-Action cards
+            - Generic cards
+            - Videos
+            - etc
+
+            ---
+
+            ### The CSS Code
+
+            Flex Positioning
+            ```css
+            header {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+
+              height: 100vh;
+            }
+            ```
+
+            Background Image
+
+            ```css
+            header {
+              background-image: url('/path/to/file');
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center; 
+            }
+            ```
+
+            ---
+
+            ## The Extras
+            Try adding extra spice to your Hero sections:
+            - Blend colours into your background image with [`background-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode);
+            - Enhance a background colour with a [`linear-gradient()`](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient) and/or [`radial-gradient()`](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient);
+            - Create transparency with [`opacity`](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity);
+
+          </textarea>
+        </section>
+      </div>
+    </div>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        plugins: [ RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+  </body>
+</html>

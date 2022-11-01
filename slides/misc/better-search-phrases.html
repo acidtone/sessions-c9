@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Better Search Phrases</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/theme/sky.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/highlight/monokai.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.js"></script>
+    <style>
+      :root {
+        --r-heading-text-transform: small-caps;
+      }
+      body .reveal .slides {
+        font-size: 36px;
+        text-align: left;
+      }
+
+      body .reveal .slides h1 {
+        font-size: 3em;
+      }
+
+      body .reveal .slides h2 {
+        font-size: 2em;
+      }
+
+      h1, h2 {
+        text-align: center;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-variant: small-caps;
+        text-align: center;
+      }
+      h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+        font-variant: initial;
+      }
+      
+      dd {
+        margin-bottom: 2rem;
+      }
+      .reveal pre code {
+        padding: 1rem;
+      }
+      .code {
+        font-family:'Courier New', Courier, monospace;
+        font-size: 2.5rem;
+        white-space: nowrap;
+        color: grey;
+      }
+      .code strong {
+        color: black;
+      }
+
+      .code.no-bullet {
+        list-style: none;
+        padding-left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          <textarea data-template>
+            # Better Search Phrases
+            ## 90% of Web Dev is [Googling]
+
+            ---
+
+            ### Convergent vs Divergent Searching
+            - **Convergent**: 
+                - There is probably one answer to your problem
+                - Example: finding a fat arrow syntax example
+            - **Divergent**: 
+                - There could be many answers to your problem
+                - You're doing general research
+                - Example: 
+                    - finding alternatives to `for` loops
+                    - finding inspiration for a logo design
+
+            ---
+
+            ### Convergent searching
+            Effective search phrases are usually:
+            1. **Concise**: Normally 1-4 words long
+                - _Exception_: Copy/pasting an error
+            2. **Domain-specific**: Terms that are used within a specific industry and not in general usage by "normies"
+            3. **Qualified**: Qualifying terms further filter the results based on:
+                - the skill level or the searcher
+                - the specific goal of the searcher
+
+            ---
+
+            ## Domain-specific terminology
+            1. Do a search for a single programming term:
+                ```
+                object
+                ```
+            2. Are the results relevant to web development? If not:
+                - What other industries also use the term you've entered?
+                - How can you make the term more domain-specific?
+                
+                    ```
+                    js object
+                    ```
+
+            ---
+
+            ## Activity: What's your jargon?
+            In groups of 3 or 4, and taking turns:
+            1. Share an obscure hobby/topic/profession/etc with the group;
+            2. Ask others to list terms related to that domain;
+            3. For the expert:
+                - Are there more domain-specific terms that can replace the ones provided by your group members?
+                - Based on the terms provided by the group, how would you rate the skill level of the person who provided it? Would you call them a "normie"?
+
+            ---
+
+            ## Qualifying terms
+            A domain-specific term will still return many results that might not be focused enough to solve your problem:
+            - Looking for tutorials?
+                ```html
+                node for beginners
+                node getting started
+                node examples
+                ```
+            - Use nerdy terms for nerdy results. Are the results different between these terms?
+                ```html
+                css docs
+                css specs
+                ```
+
+            ---
+
+            ## Example Searches
+            How would you rate the following search phrases?
+            - Were any words specific to the industry of web development? What are they?
+            - How many words are used?
+            - What is the skill level of the searcher? What problem might they be solving?
+            - How would do you identify high quality results?
+
+            ---
+
+            ## "`How do I build a web site?`"
+
+            ---
+
+            ## "`Why isn't my CSS doing anything?`"
+
+            ---
+
+            ## "`web development`"
+
+            ---
+
+            ## "`html crash course`"
+
+            ---
+
+            ## "`js architecture patterns`"
+
+            ---
+
+            ## "`[your fave browser] devtools`"
+
+            ---
+
+            ## "`most underrated string methods`"
+
+            ---
+
+            ## Identifying high quality results
+            Look for search results that:
+            - Are current (does the resource have a date?);
+            - Provide sample code;
+            - Have video chapter markers;
+            - Come from a trusted source;
+                - **Pro-tip**: prepend your favourite content creator to find results from that person/site:
+                    ```
+                    mdn fat arrow
+                    ```
+            - Fit your learning style;
+            - Are easy to find again. What search term would you use to find a favourite result in the future?
+
+            ---
+
+            ## Divergent searches
+            ### with Suggestions
+
+            ---
+
+            ## Google (or whatever) Suggestions
+            1. Enter a domain-specific term in your search bar but _DON'T_ hit enter:
+                ```
+                js loop
+                ```
+            2. Wait for Google to show completion suggestions
+                ![Example of a Suggestion search](assets/images/searching/divergent-search.png)
+            3. Pick a Suggestion to learn something new about that concept.
+
+            ---
+
+            ## "Verses" searches
+            1. Add "vs" after a tool, concept, term:
+                ```
+                for loop vs
+                ```
+            2. Wait for Google to show completion suggestions
+                ![Example of a verses search](assets/images/searching/verses-search.png)
+            3. Is there a better alternative you should investigate?
+
+            ---
+
+            ### Activities: Divergent searching
+            - Use Suggestions to find a new domain-specific term you didn't know before;
+            - Try "verses" searches to find alternative to:
+                - `curl` (or any other tool you use)
+                - a programming method/concept you've learned in class
+
+
+          </textarea>
+        </section>
+      </div>
+    </div>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        plugins: [ RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+  </body>
+</html>

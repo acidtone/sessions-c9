@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intermediate Flexbox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/theme/sky.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/highlight/monokai.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.js"></script>
+    <style>
+      :root {
+        --r-heading-text-transform: small-caps;
+      }
+      body .reveal .slides {
+        font-size: 36px;
+        text-align: left;
+      }
+
+      body .reveal .slides h1 {
+        font-size: 3em;
+      }
+
+      body .reveal .slides h2 {
+        font-size: 2em;
+      }
+
+      h1, h2 {
+        text-align: center;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-variant: small-caps;
+        text-align: center;
+      }
+      h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+        font-variant: initial;
+      }
+      
+      dd {
+        margin-bottom: 2rem;
+      }
+
+      .reveal p > img {
+        display: block;
+        margin: auto;
+      }
+
+      .reveal pre code {
+        padding: 1rem;
+      }
+      .code {
+        font-family:'Courier New', Courier, monospace;
+        font-size: 2.5rem;
+        white-space: nowrap;
+        color: grey;
+      }
+      .code strong {
+        color: black;
+      }
+
+      .code.no-bullet {
+        list-style: none;
+        padding-left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          <textarea data-template>
+            # Intermediate Flexbox
+            ## Grow, Shrink and Basis
+
+            ---
+
+            ## Key Takeaways
+            The `flex` property controls:
+            - `flex-basis`: The optimal size (i.e. `width` when in row direction) that your item should be;
+            - `flex-grow`: Whether your item will grow to fill empty space;
+            - `flex-shrink`: Whether your item will shrink if there's no extra space available;
+
+            See: [`flex` property](https://css-tricks.com/almanac/properties/f/flex/) on CSS Tricks
+
+            ---
+                
+            ## Common values for `flex`
+            `flex` is a shorthand property that is the recommended way to control `flex-shrink`, `flex-grow` and `flex-basis`.
+
+            ```css
+            flex: <'flex-grow'> <'flex-shrink'> <'flex-basis'>
+            ```
+
+            ---
+
+            ## `flex: 0 auto;`
+            - It's the shorthand for the **default value**: 
+                ```css
+                flex: 0 1 auto;
+                ``` 
+            - This is the same as flex: initial; 
+            - It sizes the item based on its width/height properties (or its content if not set).
+
+            ---
+
+            ## `flex: auto;`
+            - Is equivalent to:
+                ```css
+                flex: 1 1 auto;
+                ```
+            - Beware, this is not the default value. 
+            - It sizes the item based on its `width`/`height` properties, but makes it fully flexible so that they absorb any extra space along the main axis.
+
+            ---
+
+            ## `flex: none;`
+            - This is equivalent to:
+                ```css
+                flex: 0 0 auto;
+                ```
+            - It sizes the item according to its width/height properties, but makes it fully inflexible.
+            - This is similar to flex: initial except it is not allowed to shrink, even in an overflow situation.
+
+            ---
+
+            ## `flex: <positive-number>`
+            - Equivalent to:
+                ```css
+                flex: 1 0px;
+                ```
+            - It makes the flex item flexible and sets the flex basis to zero, resulting in an item that receives the specified proportion of the remaining space.
+
+            ---
+
+            ## `flex: <length>`
+            - Equivalent to:
+              ```css
+              flex: 1 1 <length>;
+              ```
+            - It makes the flex item inflexible and sets the flex basis to the supplied value, resulting in an item of that size instead of the size of its content.
+            - This is the "Flex" way of assigning `width` in the row direction or `height` in the column direction (and is recommended).
+            
+          </textarea>
+        </section>
+      </div>
+    </div>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        plugins: [ RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+  </body>
+</html>
