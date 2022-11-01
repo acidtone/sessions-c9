@@ -7,8 +7,8 @@
 
 ### Oct 7 - Searching and Errors
 - Slides:
-    - [Handling Errors](slides/js/js-errors.html)
-    - [Better Search Phrases](slides/misc/better-search-phrases.html)
+    - [Handling Errors](https://acidtone.github.io/sessions-c9/slides/js/js-errors.html)
+    - [Better Search Phrases](https://acidtone.github.io/sessions-c9/slides/misc/better-search-phrases.html)
 
 ### Nov 1 - Flexbox
 - Resources
@@ -17,10 +17,10 @@
         - [Flexbox Froggy](https://flexboxfroggy.com/)
         - [Flexbox Zombies](https://mastery.games/flexboxzombies/)
 - Slides:
-    - [Flexbox Basics - Horizontal Navigation](slides/html-css/flexbox-basics.html)
-    - [Flexbox Intermediate - Layout Patterns](slides/html-css/flexbox-intermediate.html)
-    - [Flexbox Extras - Common `flex` values](slides/html-css/flexbox-extras.html)
-    - [Heros and Banners](slides/html-css/heros-banners.html)
+    - [Flexbox Basics - Horizontal Navigation](https://acidtone.github.io/sessions-c9/slides/html-css/flexbox-basics.html)
+    - [Flexbox Intermediate - Layout Patterns](https://acidtone.github.io/sessions-c9/slides/html-css/flexbox-intermediate.html)
+    - [Flexbox Extras - Common `flex` values](https://acidtone.github.io/sessions-c9/slides/html-css/flexbox-extras.html)
+    - [Heros and Banners](https://acidtone.github.io/sessions-c9/slides/html-css/heros-banners.html)
 - Sample Code:
     - [Dailies](https://github.com/acidtone/dailies-c9/tree/main/2022-11-01-flexbox)
     - Codepens:
