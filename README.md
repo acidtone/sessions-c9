@@ -30,4 +30,4 @@
         - [Simple Hamburger Toggle](https://codepen.io/browsertherapy/pen/gOzvLzR)
         - [Sticky Footer with Flexbox](https://codepen.io/browsertherapy/pen/XWqZpLR)
 ### Nov 10 - Git Collaboration
-- Slides: [Git Collaboration](https://acidtone.github.io/sessions-c9/slides/devops/git-collaboration.html)
+- Slides: [Git Collaboration](https://acidtone.github.io/sessions-c9/slides/misc/git-collaboration.html)
