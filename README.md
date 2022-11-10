@@ -29,3 +29,5 @@
             - Source: [Flexbox design patterns you can use in your projects](https://www.youtube.com/watch?v=vQAvjof1oe4) by Kevin Powell
         - [Simple Hamburger Toggle](https://codepen.io/browsertherapy/pen/gOzvLzR)
         - [Sticky Footer with Flexbox](https://codepen.io/browsertherapy/pen/XWqZpLR)
+### Nov 10 - Git Collaboration
+- Slides: [Git Collaboration](https://acidtone.github.io/sessions-c9/slides/devops/git-collaboration.html)
